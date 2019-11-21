@@ -18,4 +18,4 @@ _ _ _
 
 ## See It In Action
 
-![flash cards example gif](https://media.giphy.com/media/1zkb1q58eTiTH6D7wc/giphy.gif)
+![flash cards example gif](https://media.giphy.com/media/mCIdPV7hHE9tHZ7SjP/giphy.gif)
