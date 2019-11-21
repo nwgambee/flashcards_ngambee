@@ -117,13 +117,13 @@ describe('Round', function() {
 
   it('round.endRound() should print the correct message', function() {
       round.takeTurn('birdie');
-      expect(round.endRound()).to.equal(`** Round Over!! ** You answered 100% of the questions correctly.`);
+      expect(round.endRound()).to.equal(`** Round Over!! ** You answered 100% of the questions correctly!`);
 
       round.takeTurn('red');
-      expect(round.endRound()).to.equal(`** Round Over!! ** You answered 50% of the questions correctly.`);
+      expect(round.endRound()).to.equal(`** Round Over!! ** You answered 50% of the questions correctly!`);
 
       round.takeTurn(7);
-      expect(round.endRound()).to.equal(`** Round Over!! ** You answered 33% of the questions correctly.`);
+      expect(round.endRound()).to.equal(`** Round Over!! ** You answered 33% of the questions correctly!`);
   });
 
 })

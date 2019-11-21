@@ -6,6 +6,7 @@ class Round {
     this.currentCard = deck.cards[0];
     this.turns = 0;
     this.incorrectGuesses = [];
+    this.startTime = 0;
   }
   returnCurrentCard() {
     return this.currentCard;
@@ -17,7 +18,6 @@ class Round {
       this.incorrectGuesses.push(this.currentCard.id);
     }
 
-    // this is hella janky but it works
     let cardIndex = (this.deck.cards.indexOf(this.currentCard) + 1);
     this.currentCard = this.deck.cards[cardIndex];
     return turn.giveFeedback(guess);
@@ -30,10 +30,16 @@ class Round {
       return Math.round((1 - (this.incorrectGuesses.length / this.turns)) * 100);
     }
   }
+  startTimer() {
+    this.startTime = Date.now()
+  }
   endRound() {
-    let message = `** Round Over!! ** You answered ${this.calculatePercentCorrect()}% of the questions correctly.`;
+    let endTime = Date.now();
+    let timeTaken = (endTime - this.startTime) / 1000;
+    let message = `** Round Over!! ** You answered ${this.calculatePercentCorrect()}% of the questions correctly!`;
     console.log(message);
-    return message; // not sure I like this, since I don't need to return anything
+    console.log(`It took you ${timeTaken} seconds.`);
+    return message;
   }
 }
 

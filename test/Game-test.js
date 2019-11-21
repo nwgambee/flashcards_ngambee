@@ -24,7 +24,7 @@ describe('Game', function() {
     expect(game.startGame).to.be.a('function');
   });
 
-  it('game.startGame() should be able to hold cards', function() {
+  it('should be able to hold cards', function() {
     expect(game.cards).to.deep.equal([])
 
   });
