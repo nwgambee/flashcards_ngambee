@@ -15,23 +15,23 @@ class Game {
   }
   startGame() {
     for (var i = 0; i < prototypeQuestions.length; i++) {
-     const card = new Card(prototypeQuestions[i]);
-     this.cards.push(card);
-   }
-   const deck = new Deck(this.cards);
-   const round = new Round(deck);
-   this.currentRound = round;
-   this.printMessage(deck, round);
-   this.printQuestion(round);
-   round.startTimer();
- }
- printMessage(deck, round) {
-      console.log(`Welcome to FlashCards! You are playing with ${deck.countCards()} cards.
+      const card = new Card(prototypeQuestions[i]);
+      this.cards.push(card);
+    }
+    const deck = new Deck(this.cards);
+    const round = new Round(deck);
+    this.currentRound = round;
+    this.printMessage(deck);
+    this.printQuestion(round);
+    round.startTimer();
+  }
+  printMessage(deck) {
+    console.log(`Welcome to FlashCards! You are playing with ${deck.countCards()} cards.
 -----------------------------------------------------------------------`)
   }
 
   printQuestion(round) {
-      util.main(round);
+    util.main(round);
   }
 }
 

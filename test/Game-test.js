@@ -5,14 +5,13 @@ const data = require('../src/data');
 const prototypeQuestions = data.prototypeData;
 
 const Game = require('../src/Game');
-const Deck = require('../src/Deck');
 const Card = require('../src/Card');
 const Round = require('../src/Round');
 
 describe('Game', function() {
   let game;
 
-  beforeEach( () => {
+  beforeEach(() => {
     game = new Game();
   });
 
