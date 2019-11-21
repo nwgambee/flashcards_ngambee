@@ -2,7 +2,6 @@
 
 ## Abstract
 This was our first project of Module 2. The goal of this project was to gain a better understanding of Test Driven Development by implementing it into a flashcard-style game run through the command line. Test cases were written following Turing's TDD standards.
-
 _ _ _
 
 ## Setup:
@@ -17,5 +16,7 @@ _ _ _
 _ _ _
 
 ## See It In Action
+
+Once all flashcards have been answered, a message will appear telling you what percentage you got correct and how long the round took you. 
 
 ![flash cards example gif](https://media.giphy.com/media/mCIdPV7hHE9tHZ7SjP/giphy.gif)
