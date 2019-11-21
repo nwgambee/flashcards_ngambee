@@ -6,11 +6,14 @@ const Card = require('../src/Card');
 const Deck = require('../src/Deck');
 const Round = require('../src/Round');
 
+// let gameTime;
+
 class Game {
   constructor() {
     this.currentRound = '';
     this.deck;
     this.cards = [];
+    this.gameTime = 0;
   }
   startGame() {
     for (var i = 0; i < prototypeQuestions.length; i++) {
@@ -22,12 +25,13 @@ class Game {
    this.currentRound = round;
    this.printMessage(deck, round);
    this.printQuestion(round);
-   this.startTimer();
+   round.startTimer();
  }
- startTimer() {
-   let startTime = Date.now();
-   return startTime;
- }
+ // startTimer() {
+ //   let startTime = Date.now();
+ //   this.gameTime = startTime;
+ //   return startTime;
+ // }
 
   printMessage(deck, round) {
       console.log(`Welcome to FlashCards! You are playing with ${deck.countCards()} cards.

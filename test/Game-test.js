@@ -24,7 +24,7 @@ describe('Game', function() {
     expect(game.startGame).to.be.a('function');
   });
 
-  it('game.startGame() should be able to hold cards', function() {
+  it('should be able to hold cards', function() {
     expect(game.cards).to.deep.equal([])
 
   });
@@ -41,15 +41,5 @@ describe('Game', function() {
   it('game.startGame() should create a new Round using the deck', function() {
     game.startGame();
     expect(game.currentRound).to.be.a.instanceof(Round);
-  });
-
-  describe('Timer', function() {
-    it('should have a startTimer method', function() {
-      expect(game.startTimer).to.be.a('function');
-    });
-
-    it('game.startTimer() should return the current date.now() value', function() {
-      expect(game.startTimer()).to.equal(Date.now());
-    })
   });
 });
