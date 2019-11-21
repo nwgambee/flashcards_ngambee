@@ -125,5 +125,8 @@ describe('Round', function() {
       round.takeTurn(7);
       expect(round.endRound()).to.equal(`** Round Over!! ** You answered 33% of the questions correctly!`);
   });
-
-})
+  it('startTimer method should update round.startTime', function() {
+    round.startTimer()
+    expect(round.startTime).to.not.equal(0);
+  });
+});
