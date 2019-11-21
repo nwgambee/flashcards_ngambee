@@ -22,6 +22,11 @@ class Game {
    this.currentRound = round;
    this.printMessage(deck, round);
    this.printQuestion(round);
+   this.startTimer();
+ }
+ startTimer() {
+   let startTime = Date.now();
+   return startTime;
  }
 
   printMessage(deck, round) {

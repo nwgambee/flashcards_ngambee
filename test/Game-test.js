@@ -42,4 +42,14 @@ describe('Game', function() {
     game.startGame();
     expect(game.currentRound).to.be.a.instanceof(Round);
   });
+
+  describe('Timer', function() {
+    it('should have a startTimer method', function() {
+      expect(game.startTimer).to.be.a('function');
+    });
+
+    it('game.startTimer() should return the current date.now() value', function() {
+      expect(game.startTimer()).to.equal(Date.now());
+    })
+  });
 });
