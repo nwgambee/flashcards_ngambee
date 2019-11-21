@@ -12,20 +12,20 @@ describe('Round', function() {
   let deck;
   let round;
 
-  beforeEach( () => {
-    card1 = new Card ({
+  beforeEach(() => {
+    card1 = new Card({
       "id": 1,
       "question": `A score of one better than par on a golf hole is called what?`,
       "answers": ['birdie', 'bogey', 'eagle'],
       "correctAnswer": 'birdie'
     });
-    card2 = new Card ({
+    card2 = new Card({
       "id": 2,
       "question": `What is my favorite color?`,
       "answers": ['green', 'blue', 'orange'],
       "correctAnswer": 'green'
     });
-    card3 = new Card ({
+    card3 = new Card({
       "id": 3,
       "question": `How many toes do I have on my right foot?`,
       "answers": [6, 5, 10],
@@ -99,7 +99,7 @@ describe('Round', function() {
   });
 
   it('should have a calculatePercentCorrect method', function() {
-      expect(round.calculatePercentCorrect).to.be.a('function');
+    expect(round.calculatePercentCorrect).to.be.a('function');
   });
 
   it('round.calculatePercentCorrect() should return the % of correct guesses', function() {
@@ -112,18 +112,18 @@ describe('Round', function() {
   });
 
   it('should have a endRound method', function() {
-      expect(round.endRound).to.be.a('function');
+    expect(round.endRound).to.be.a('function');
   });
 
   it('round.endRound() should print the correct message', function() {
-      round.takeTurn('birdie');
-      expect(round.endRound()).to.equal(`** Round Over!! ** You answered 100% of the questions correctly!`);
+    round.takeTurn('birdie');
+    expect(round.endRound()).to.equal(`** Round Over!! ** You answered 100% of the questions correctly!`);
 
-      round.takeTurn('red');
-      expect(round.endRound()).to.equal(`** Round Over!! ** You answered 50% of the questions correctly!`);
+    round.takeTurn('red');
+    expect(round.endRound()).to.equal(`** Round Over!! ** You answered 50% of the questions correctly!`);
 
-      round.takeTurn(7);
-      expect(round.endRound()).to.equal(`** Round Over!! ** You answered 33% of the questions correctly!`);
+    round.takeTurn(7);
+    expect(round.endRound()).to.equal(`** Round Over!! ** You answered 33% of the questions correctly!`);
   });
   it('startTimer method should update round.startTime', function() {
     round.startTimer()

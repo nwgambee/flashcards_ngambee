@@ -10,7 +10,7 @@ class Round {
   }
   returnCurrentCard() {
     return this.currentCard;
-  };
+  }
   takeTurn(guess) {
     const turn = new Turn(guess, this.currentCard);
     this.turns++;

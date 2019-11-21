@@ -8,7 +8,7 @@ describe('Card', function() {
   let card;
   let cardObj;
 
-  beforeEach( () => {
+  beforeEach(() => {
     cardObj = {
       "id": 1,
       "question": `A score of one better than par on a golf hole is called what?`,
